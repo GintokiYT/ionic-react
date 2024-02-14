@@ -4,6 +4,12 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
+    "android": "ionic cap run android --external --livereload",
+    "ios": "ionic cap run ios --external --livereload",
+    "android:prod": "ionic cap build android --prod --realease",
+    "ios:prod": "ionic cap build ios --prod --realease",
+    "v:proxies": "ng build @geor360/proxies --configuration production",
+    "v:inbox": "ng build @geor360/inbox --configuration production",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -12,6 +18,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@capacitor-community/sqlite": "^5.5.2",
+    "@capacitor/android": "5.6.0",
+    "@capacitor/app": "5.0.6",
+    "@capacitor/core": "5.6.0",
+    "@capacitor/haptics": "5.0.6",
+    "@capacitor/keyboard": "5.0.7",
+    "@capacitor/status-bar": "5.0.6",
     "@ionic/react": "^7.0.0",
     "@ionic/react-router": "^7.0.0",
     "@types/react-router": "^5.1.20",
@@ -20,9 +33,11 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^5.3.4",
-    "react-router-dom": "^5.3.4"
+    "react-router-dom": "^5.3.4",
+    "react-virtuoso": "^4.6.2"
   },
   "devDependencies": {
+    "@capacitor/cli": "5.6.0",
     "@testing-library/dom": ">=7.21.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -31,10 +46,13 @@
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-legacy": "^5.0.0",
     "@vitejs/plugin-react": "^4.0.1",
+    "autoprefixer": "^10.4.16",
     "cypress": "^13.5.0",
     "eslint": "^8.35.0",
     "eslint-plugin-react": "^7.32.2",
     "jsdom": "^22.1.0",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
     "terser": "^5.4.0",
     "typescript": "^5.1.6",
     "vite": "^5.0.0",
